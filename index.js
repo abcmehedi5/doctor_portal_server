@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express()
 const ObjecId = require('mongodb').ObjectId
 require('dotenv').config()
-const port = 4000
+// const port = 4000
 const PORT = process.env.PORT;
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
@@ -281,6 +281,6 @@ client.connect(err => {
 });
 
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log(`app listening on port ${PORT}`)
 })
