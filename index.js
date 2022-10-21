@@ -5,6 +5,7 @@ const app = express()
 const ObjecId = require('mongodb').ObjectId
 require('dotenv').config()
 const port = 4000
+const PORT = process.env.PORT;
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
 //express file upload start
@@ -281,5 +282,5 @@ client.connect(err => {
 
 
 app.listen(port, () => {
-    console.log(`app listening on port ${port}`)
+    console.log(`app listening on port ${PORT}`)
 })
